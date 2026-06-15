@@ -27,7 +27,7 @@ def greet(name: str):
     """Greet endpoint that takes a name parameter"""
     return JSONResponse(
         status_code=200,
-        content={"message": f"Hello {name}!"}
+        content={"message": f"Hello {name}, how are you?"}
     )
 
 

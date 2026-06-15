@@ -18,7 +18,7 @@ def health_check():
     """Health check endpoint"""
     return JSONResponse(
         status_code=200,
-        content={"status": "healthy"}
+        content={"status": "it is healthy"}
     )
 
 

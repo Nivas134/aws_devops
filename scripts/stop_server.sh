@@ -1,10 +1,6 @@
 #!/bin/bash
-set +e
 
-echo "Stopping existing container..."
+docker stop aws_cicd || true
+docker rm aws_cicd || true
 
-docker stop aws_cicd
-
-docker rm aws_cicd
-
-echo "Container stopped."
+echo "Previous container stopped."

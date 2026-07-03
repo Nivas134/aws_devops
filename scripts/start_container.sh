@@ -1,9 +1,15 @@
 #!/bin/bash
 set -e
 
-docker pull kalyan133/aws_cicd
+echo "Pulling latest image..."
 
-docker run -d -p 8080:8080 kalyan133/aws_cicd
+docker pull kalyan133/aws_cicd:latest
 
-# Start the container with the specified image and options
-echo "Starting container...final"
+echo "Starting container..."
+
+docker run -d \
+    --name aws_cicd \
+    -p 8000:8000 \
+    kalyan133/aws_cicd:latest
+
+echo "Container started."

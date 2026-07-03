@@ -1,5 +1,10 @@
 #!/bin/bash
-set -e
+set +e
 
-# stop the container with the specified name
-echo "Stopping container..."
+echo "Stopping existing container..."
+
+docker stop aws_cicd
+
+docker rm aws_cicd
+
+echo "Container stopped."

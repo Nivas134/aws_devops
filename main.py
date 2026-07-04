@@ -9,7 +9,8 @@ def read_root():
     """Root endpoint that returns a hello world message"""
     return JSONResponse(
         status_code=200,
-        content={"message": "Hello World from FastAPI!", "status": "success"}
+        content={"message": "Hello World from FastAPI! --- updated",
+                 "status": "success"}
     )
 
 
